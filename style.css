@@ -1,0 +1,228 @@
+/*
+Theme Name: ELM
+Theme URI: 
+Author: LLA
+Author URI: 
+Description: E-commerce theme for LMsecurite.com
+License: GNU 
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: yellow
+Text Domain: e-commerce lmsecurite
+
+This theme, like WordPress, is licensed under the GPL.
+Designed for wp shop
+It's still in development, be carefull :);
+*/
+
+#nav_header{
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    background-color: #ffff00;
+
+}
+
+  #nav_header.small{
+    height: 50px;
+    font-size:80%;
+    background-color: white;
+    line-height: 25px;
+    opacity: 0.7;
+  }
+
+
+#nav_header h1#logo {
+    display: inline-block;
+    height: 100%;
+    float: left;
+    font-family: "Oswald", sans-serif;
+    font-size: 1em;
+    color: black;
+    font-weight: 400;
+}
+
+#nav_header h1 img{
+  height: 30px;
+}
+
+#nav_header nav {
+    display: inline-block;
+    float: left;
+    padding-right: 100px;
+        line-height: 40px;
+}
+#nav_header nav a {
+    line-height: 30px;
+    margin-right: 15px;
+    color: blue;
+    font-weight: 700;
+    font-size: 0.8em;
+}
+#nav_header nav a:hover {
+    color: #9fdffc;
+}
+
+.account_and_cart{
+	float: right;
+	font-size: 0.8em;
+}
+
+#nav_header .wps-mini-cart-header{
+	background-color: transparent;
+	margin:0;
+	padding: 0;
+}
+
+#nav_header ul{
+	list-style:none;
+}
+
+.under_admin{
+	margin-top:50px !important;
+}
+
+#searchBox{
+    float: right;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#searchBox .form{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hidden{
+    display: none;
+}
+
+
+#searchBox .search-query{
+    font-size: 1em;
+    width: 20%;
+}
+
+#nav_content{
+    float: left;
+    padding-left: 20px;
+}
+
+#sitelogo{
+    float:left;
+}
+
+#content{
+    
+    margin: 0 auto;
+    min-height: 800px;
+    padding: 0 20px;
+    padding-top: 20px;
+    position: relative;
+    width: 80%;
+    box-shadow: 1px 1px 12px #555;
+}
+
+.center{
+    text-align: center;
+}
+
+.category-title{
+    font-size: 1.5em;
+    margin:10px;
+}
+
+/** SEARCH **/
+/* Search widget */
+#searchBox #searchsubmit {
+    display: none;
+}
+
+
+#searchBox .search-query {
+    background-color: transparent;
+    background-image: url(images/search-icon.png);
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    border: none;
+    cursor: pointer;
+    height: 24px;
+    margin: 3px 0;
+    padding: 0 0 0 34px;
+    position: relative;
+    -webkit-transition: width 400ms ease, background 400ms ease;
+    transition:         width 400ms ease, background 400ms ease;
+    width: 1px;
+}
+
+#searchBox .search-query:focus {
+    background-color: #fff;
+    border: 2px solid #c3c0ab;
+    cursor: text;
+    outline: 0;
+    width: 230px;
+}
+
+@media print,
+    (-o-min-device-pixel-ratio: 5/4),
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 120dpi) {
+
+    #searchBox .search-query {
+        background-image: url(images/search-icon-2x.png);
+    }
+
+    .format-audio .audio-content,
+    .format-status .entry-content:before,
+    .format-status .entry-meta:before,
+    .comment-list > li:after,
+    .comment-list .children > li:before {
+        background-image: url(images/dotted-line-2x.png);
+    }
+}
+/******/
+/*** WPSHOP **/
+.wpshop_category_informations{
+    margin-bottom: 100px;
+}
+
+.wps-header-mini-cart{
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+.login_container{
+    float: left;
+}
+.login_container ul{
+    margin-top:2px;
+}
+
+body .entry-content button, body .bouton_wpshop, body .wpshop_cart_buttons_container input[type=submit].bouton_wpshop {
+    background: none;
+    border: none;
+    padding: 8px 14px;
+    background: #67c4d0;
+    color: #fff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 20px;
+    box-shadow: none;
+    text-shadow: none;
+    line-height: 22px;
+    border-radius: 3px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+/*********/
+/*********/
