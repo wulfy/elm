@@ -47,7 +47,7 @@
                   <a href='javascript:scrollToId("#group2")'><i class="fa fa-bus fa-fw"></i>EQUIPEMENT URBAIN</a>
                   <a href='javascript:scrollToId("#group3")'><i class="fa fa-print fafw"></i>IDENTIFICATION BRADY</a>
                   <a href="javascript:scrollToId('#group4')"><i class="fa fa-medkit fa-fw"></i>PROTECTION SÉCURITÉ</a>
-                  <a href='<?php echo do_shortcode('[get_category_link term_id=7]') ?>'><i class="fa fa-exclamation-triangle fa-fw"></i>SIGNALISATION</a>
+                  <a href='<?php echo do_shortcode('[get_category_link term_slug="signalisation_vehicules"]') ?>'><i class="fa fa-exclamation-triangle fa-fw"></i>SIGNALISATION</a>
               </nav>
           </div>
         </div>
@@ -59,4 +59,4 @@
 	</div><!-- .sidebar -->
 
 	<div id="main2" class="site-main">
-    
+

@@ -15,28 +15,9 @@ get_header("front-page"); ?>
         <div class="hidden_title title">Base Layer</div>
 
         <div class="callbacks_container">
-      <ul class="rslides" id="slider4">
-          <li>
-            <img src="http://idata.over-blog.com/3/39/16/67/BANNIERE-4/041110-joyeux-noel-5-CREATION-FEE-FEERIQUE.gif" alt="">
-            <p class="caption"><i class="fa fa-gift fa-fw"></i><i class="fa fa-gift fa-fw"></i>Bonnes fêtes !! <i class="fa fa-gift fa-fw"></i><i class="fa fa-gift fa-fw"></i><br> Retrouvez tous nos articles pour 2016 aux meilleurs prix !</p>
-          </li>
-          <li>
-            <a href='javascript:scrollToId("#group2")'><img src="http://www.cps-equipements.fr/img/photos/zoom/mobilier_03.jpg" alt="">
-            <p class="caption"><i class="fa fa-bus fa-fw"></i>EQUIPEMENT URBAIN</p></a>
-          </li>
-          <li>
-            <a href='javascript:scrollToId("#group3")'><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9qUysX-GKwpzQIdw4p3VQlC6rvdQwA82sAxW0C4p2Dp-AxBqr" alt="">
-            <p class="caption"><i class="fa fa-print fafw"></i>IDENTIFICATION BRADY</p></a>
-          </li>
-          <li>
-            <a href='javascript:scrollToId("#group4")'><img src="http://www.lmsecurite.fr/rangement%20%20rayonnage%20%20classement/archivage.JPG" alt="">
-            <p class="caption"><i class="fa fa-medkit fa-fw"></i>PROTECTION SÉCURITÉ</p></a>
-          </li>
-          <li>
-            <a href='javascript:scrollToId("#group5")'><img src="http://www.saint-astier.fr/photo/art/grande/7535766-11626076.jpg?v=1425570568" alt="">
-            <p class="caption"><i class="fa fa-exclamation-triangle fa-fw"></i>SIGNALISATION</p></a>
-          </li>
-        </ul>
+      <?php 
+    echo do_shortcode("[metaslider id=216]"); 
+?>
       </div>
 
 
