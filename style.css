@@ -26,6 +26,18 @@ It's still in development, be carefull :);
 
 }
 
+@media only screen and (max-width: 900px){
+    #nav_header{
+        font-size: 0.6em;
+    }
+}
+
+@media only screen and (min-width:950px) and (max-width: 1150px){
+    #nav_header{
+        font-size: 0.8em;
+    }
+}
+
   #nav_header.small{
     height: 50px;
     font-size:80%;
@@ -50,25 +62,34 @@ It's still in development, be carefull :);
 }
 
 #nav_header nav {
-    display: inline-block;
     float: left;
-    padding-right: 100px;
         line-height: 40px;
+        margin-top: 5px;
 }
 #nav_header nav a {
     line-height: 30px;
-    margin-right: 15px;
+    margin-right: 0.5em;
     color: blue;
     font-weight: 700;
     font-size: 0.8em;
+     text-decoration:none; 
 }
 #nav_header nav a:hover {
-    color: #9fdffc;
+    text-decoration:underline; 
 }
 
 .account_and_cart{
 	float: right;
 	font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.account_and_cart a:link{
+ text-decoration:none; 
+}
+.account_and_cart a:hover{
+ text-decoration:underline; 
+
 }
 
 #nav_header .wps-mini-cart-header{
@@ -79,6 +100,8 @@ It's still in development, be carefull :);
 
 #nav_header ul{
 	list-style:none;
+        margin: 0;
+    padding: 0;
 }
 
 .under_admin{
@@ -87,6 +110,7 @@ It's still in development, be carefull :);
 
 #searchBox{
     float: right;
+    clear: both;
     margin-right: auto;
     margin-left: auto;
 }
@@ -109,10 +133,12 @@ It's still in development, be carefull :);
 #nav_content{
     float: left;
     padding-left: 20px;
+    width: 70%;
 }
 
 #sitelogo{
     float:left;
+    width: 20%;
 }
 
 #content{
@@ -141,7 +167,6 @@ It's still in development, be carefull :);
     display: none;
 }
 
-
 #searchBox .search-query {
     background-color: transparent;
     background-image: url(images/search-icon.png);
@@ -165,6 +190,8 @@ It's still in development, be carefull :);
     cursor: text;
     outline: 0;
     width: 230px;
+    clear: both;
+    display: block;
 }
 
 @media print,
@@ -191,12 +218,14 @@ It's still in development, be carefull :);
 }
 
 .wps-header-mini-cart{
-    margin-top: 2px;
+    float: left;
+    margin-top: 0px;
     margin-left: 10px;
 }
 
 .login_container{
     float: left;
+    height: 1em;
 }
 .login_container ul{
     margin-top:2px;
@@ -209,7 +238,7 @@ body .entry-content button, body .bouton_wpshop, body .wpshop_cart_buttons_conta
     background: #67c4d0;
     color: #fff;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     color: #fff;
     text-transform: uppercase;
@@ -225,4 +254,104 @@ body .entry-content button, body .bouton_wpshop, body .wpshop_cart_buttons_conta
     transition: all 0.1s ease-in-out;
 }
 /*********/
+
+.search_thumb_container{
+    width: 100px;
+    height: auto;
+    display: inline-block;
+    margin-right: 50px;
+    vertical-align:middle;
+}
+.search_thumb_container img{
+        display: inline-block;
+    vertical-align: middle;
+}
+
+.search_title_container{
+    display: inline-block;
+    vertical-align: middle;
+}
+.titleName a:link{
+ text-decoration:none; 
+}
+
+.titleName a:hover{
+ text-decoration:underline; 
+}
+
+.page-title{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.issearch .fa{
+    font-size: 1.5em;
+}
+
+.fondBleu:after {
+  right: -3px;
+  height: 3px;
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(yellow), to(transparent));
+  background-image: -webkit-linear-gradient(left, yellow, transparent);
+  background-image: -moz-linear-gradient(left, yellow, transparent);
+  background-image: -o-linear-gradient(left, yellow, transparent);
+   content: "";
+  position: absolute;
+  bottom: -3px;
+  left: -3px;
+}
+.fondOrange, .fondBleu{
+    position: relative;
+}
+.fondOrange:after {
+  right: -3px;
+  height: 3px;
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(blue), to(transparent));
+  background-image: -webkit-linear-gradient(left, blue, transparent);
+  background-image: -moz-linear-gradient(left, blue, transparent);
+  background-image: -o-linear-gradient(left, blue, transparent);
+   content: "";
+  position: absolute;
+  bottom: -3px;
+  left: -3px;
+}
+
+.resultTypeTitle{
+    margin-bottom: 20px;
+    margin-top: 50px;
+    font-weight: bold;
+}
 /*********/
+
+/***** BREADCRUMB ***/
+#content #wps-breadcrumb{
+    padding-top: 0;
+    padding-bottom: 40px;
+    font-style: italic;
+}
+
+
+/***** CATEGORY **/
+.category-picture img{
+    width: 80%;
+}
+.wpshop_mini_grid_thumbnail{
+    height: 100px;
+}
+ul.products_listing.grid_mode img{
+    max-width: 100px ;
+    max-height: 100px;
+}
+
+img.attachment-medium{
+    max-width: 80% !important;
+    max-height: 200px;
+}
+
+/*******************/
+
+/****** PRODUCTS ***/
+
+.entry-title{
+    text-align: center;
+}

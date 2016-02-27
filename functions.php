@@ -13,8 +13,11 @@ if ( function_exists('register_sidebar') ){
 	));
 }
 
+global $the_terms_result;
+global $termsdata;
 
-		
+ini_set('display_errors', true);
+	error_reporting(E_ALL);
 /** @ignore 
 function custom_url_head() {
 	//update url
@@ -234,13 +237,23 @@ function goldpot_add_theme_page() {
 		return $open;
 	}
 
+	function get_link_form_term(){
+		$att = array("base_cat_id"=>$term->term_id);
+		$link = get_wpshop_category_link($att);
+	}
+
 /** ne fonctionne pas
 	function my_smart_search( $search, &$wp_query ) {
     global $wpdb;
 
     if ( empty( $search ))
         return $search;
- 
+
+ 	echo "<pre>";
+ 	print_r($wp_query->query_vars);
+ 	echo "</pre>";
+
+
     $terms = $wp_query->query_vars[ 's' ];
     $exploded = explode( ' ', $terms );
     if( $exploded === FALSE || count( $exploded ) == 0 )
@@ -268,19 +281,110 @@ function goldpot_add_theme_page() {
     return $search;
 }
  
-add_filter( 'posts_search', 'my_smart_search', 500, 2 );
+//add_filter( 'posts_search', 'my_smart_search', 500, 2 );
+
 **/
 
-/** permet d afficher la derniere requete utilisée
-function test_func($query){
-   global $wpdb;
-   echo "<pre>";
-   print_r($wpdb->last_query);
-   echo "</pre>";
-   //die();
+function has_terms (){
+	global $the_terms_result;
+
+	return sizeof($the_terms_result)>0;
 }
 
-add_action( 'pre_get_posts', 'test_func' );
+function getTermsResults() {
+	global $the_terms_result;
+
+	return $the_terms_result;
+}
+
+function getTermsData(){
+	global $termsdata;
+
+	return $termsdata;
+}
+
+function setTermsData($terms){
+	global $termsdata;
+
+	foreach($terms as $key=>$term){
+		$termsdata[$term->term_id]["link"] = get_term_link(intval($term->term_id));
+		$category_meta_information = ( !empty($term) && !empty($term->term_id) ) ? get_option(WPSHOP_NEWTYPE_IDENTIFIER_CATEGORIES . '_' . $term->term_id) : '';
+		if(isset($category_meta_information['wpshop_category_picture']))
+			$image_url = wp_get_attachment_image_url( $category_meta_information['wpshop_category_picture'], 'thumbnail', false);//LLA
+		$image_url = ( !empty($image_url) ) ? $image_url : WPSHOP_DEFAULT_CATEGORY_PICTURE; //LLA
+		$termsdata[$term->term_id]["img"] = $image_url;
+	}
+
+}
+/** exemple **/
+function serach_in_terms($query) {
+global $wpdb,$the_terms_result; 
+
+$the_terms_result = [];
+
+	if(isset($_GET['s']))
+	{
+		$search = urldecode($_GET['s']);
+
+	$query = $wpdb->prepare("SELECT T.* FROM " . $wpdb->terms . " AS T INNER JOIN " . $wpdb->term_taxonomy . " AS TT ON T.term_id = TT.term_id WHERE TT.taxonomy = %s AND T.name LIKE %s", WPSHOP_NEWTYPE_IDENTIFIER_CATEGORIES , "%".$search."%");
+	$result = $wpdb->get_results($query);
+
+	$the_terms_result = $result;
+	setTermsData($the_terms_result);
+	}	
+
+	
+}
+
+add_action('pre_get_posts','serach_in_terms');
+
+/** exemple
+class mypost {
+
+	 public function __construct( array $arguments = array() ) {
+	       if (!empty($arguments)) {
+            foreach ($arguments as $property => $argument) {
+                $this->{$property} = $argument;
+            }
+        }         
+	 }
+}
+/**exemple
+function my_the_post_action( $post_object ) {
+
+	ini_set('display_errors', true);
+	error_reporting(E_ALL);
+	global $the_terms_result;
+die(var_dump($terms = wp_get_post_terms(190,WPSHOP_NEWTYPE_IDENTIFIER_CATEGORIES)));
+	if(has_terms())
+	{
+	
+		foreach($the_terms_result as $key=>$term)
+		{	
+			$att = array("base_cat_id"=>$term->term_id);
+			
+			$link = get_wpshop_category_link($att);
+			$newpostarray = array(
+						"post_type"=>"wpshop_product_category",
+						"post_title"=>$term->name,
+						"guid"=>$link,
+						"ID"=>$term->term_id,
+						'post_status'   => 'publish',
+  						'post_author'   => 1,
+						);
+			$newpost = new mypost($newpostarray);
+
+			$post_object = new WP_Post($newpost);
+
+		}
+	}
+			
+	return $post_object;
+}
+add_action( 'the_post', 'my_the_post_action' );**/
+
+
+ 
 
 	/******* SURCHARGE WPSHOP FUNCTIONS **********/
 	/**

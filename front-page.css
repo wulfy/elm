@@ -218,7 +218,7 @@ Designed for wp shop
   }
 }
 
-@media only screen and (min-width:980), screen and (max-width: 1215px){
+@media only screen and (min-width:980px), screen and (max-width: 1215px){
 
   #nav_header{
     font-size: 70%;

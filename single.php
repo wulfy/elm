@@ -10,7 +10,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main <?php if(is_admin_bar_showing()) echo 'under_admin'; ?>" role="main">
 
 		<?php
 		// Start the loop.

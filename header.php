@@ -15,7 +15,7 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/wordpress_style.css">
 	<!--[if lt IE 9]>
@@ -38,7 +38,7 @@
                 <?php echo do_shortcode('[get_login_container]')?>
                 <?php echo do_shortcode('[wps_mini_cart]') ?>
                 <?php /*echo do_shortcode('[wpshop_breadcrumb]') */?> 
-                <br/>
+                
                 <div id="searchBox">
                   <?php get_search_form(); ?>
                 </div>
