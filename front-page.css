@@ -46,12 +46,40 @@ Designed for wp shop
 #sitelogo{
     float:left;
 }
-.account_and_cart{
-    float: left;
-    font-size: 1.5em;
-    margin-right: 50px;
-    padding-top: 15px;
+
+.account_and_cart a{
+  border: solid 1px #D7DF01;
 }
+
+.account_and_cart a .red:link{
+  color: red;
+}
+
+.account_and_cart a .red:visited{
+  color: red;
+}
+
+
+.account_and_cart a:link{
+    float: right;
+    font-size: 2em;
+    margin-top: 5px;
+    margin-right: 5px;
+    padding: 10px;
+    
+    -webkit-transition: font-size 400ms ease, color 200ms ease;
+    transition:         font-size 400ms ease, color 200ms ease;
+    text-decoration: none;
+    color: blue;
+}
+
+.account_and_cart a:visited{
+    color: blue;
+  }
+
+.account_and_cart a:hover{
+font-size: 2.5em;
+  }
 
 .hidden{
   display: none;
@@ -67,19 +95,20 @@ Designed for wp shop
 
 #nav_header{
     width: 100%;
-    height: 80px;
+    height: 60px;
     overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 300;
-    background-color: #ffff00;
+    /*background-color: #ffff00;*/
+    background: linear-gradient(to right, #ffff00, white);
+    box-shadow: 0px 5px 5px #888888;
 }
 
   #nav_header.small{
     height: 50px;
-    font-size:80%;
-    background-color: white;
+    font-size: 0.5em;
     line-height: 25px;
     opacity: 0.7;
   }
@@ -90,17 +119,25 @@ Designed for wp shop
 
 #nav_header h1#logo {
     display: inline-block;
-    height: 80px;
-    line-height: 80px;
+    height: 60px;
+    line-height: 60px;
     float: left;
     font-family: "Oswald", sans-serif;
     font-size: 3em;
     color: black;
     font-weight: 400;
+    
+    
+}
+
+#nav_header li span{
+    display: block;
+    border-right: solid 1px #D7DF01;
+    padding-right: 5px;
 }
 
 #nav_header h1 img{
-  height: 50px;
+  height: 30px;
   vertical-align: middle;
 }
 
@@ -113,28 +150,104 @@ Designed for wp shop
     display: inline-block;
     float: right;
     padding-right: 10px;
+    padding-top: 5px;
 }
+
 #nav_header nav a {
-    line-height: 50px;
+
     margin-right: 15px;
     color: blue;
     font-weight: 700;
-    font-size: 1em;
+    font-size: 1.2em;
+    text-decoration: none;
 }
 #nav_header nav a:hover {
-    color: #9fdffc;
+   /* color: #9fdffc;*/
 }
 
+
+/** SEARCH **/
+/* Search widget */
+
+#searchBox{
+      float: left;
+    padding-top: 15px;
+}
+
+#searchBox #searchsubmit {
+    display: none;
+}
+
+#searchBox .search-query {
+    background-color: transparent;
+    background-image: url(images/search-icon.png);
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    border: none;
+    cursor: pointer;
+    height: 24px;
+    margin: 3px 0;
+    padding: 0 0 0 34px;
+    position: relative;
+    -webkit-transition: width 400ms ease, background 400ms ease;
+    transition:         width 400ms ease, background 400ms ease;
+    width: 1px;
+
+}
+
+#searchBox .search-query:focus {
+    background-color: #fff;
+    border: 2px solid #c3c0ab;
+    cursor: text;
+    outline: 0;
+    width: 230px;
+    clear: both;
+    display: block;
+}
+
+@media print,
+    (-o-min-device-pixel-ratio: 5/4),
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 120dpi) {
+
+    #searchBox .search-query {
+        background-image: url(images/search-icon-2x.png);
+    }
+
+    .format-audio .audio-content,
+    .format-status .entry-content:before,
+    .format-status .entry-meta:before,
+    .comment-list > li:after,
+    .comment-list .children > li:before {
+        background-image: url(images/dotted-line-2x.png);
+    }
+}
+/******/
+
+/**
 #searchBox{
     margin-right: auto;
     margin-left: auto;
+        margin-right: 10px;
+    margin-top: 20px;
+    float: left;
 }
+
+.small #searchBox{
+margin-top: 10px;
+}
+
+
+#searchBox button{
+  display: block;
+  }
 
 #searchBox .search-query{
     font-size: 1em;
 }
 
-
+**/
 
 
 
@@ -203,7 +316,7 @@ Designed for wp shop
     background-color:rgb(255, 255, 0);
     width: 100%;
     z-index:200;
-    font-size: 2em;
+    font-size: 1.5em;
   }
     .item {
      float: left;
@@ -218,7 +331,7 @@ Designed for wp shop
   }
 }
 
-@media only screen and (min-width:980px), screen and (max-width: 1215px){
+@media only screen and (max-width: 1215px){
 
   #nav_header{
     font-size: 70%;
@@ -467,7 +580,7 @@ Designed for wp shop
   }
 
   .contact{
-    margin-top: 25%;
+    margin-top: 26%;
     margin-left: 25%;
     text-decoration: none;
   }
@@ -571,4 +684,102 @@ Designed for wp shop
 }
 .under_admin{
   margin-top:50px;
+}
+
+.category_picture_container{
+height: 100%;
+  }
+
+/***** SLIDER *******/
+.flexslider .slides img{
+    max-height: 450px !important;
+    vertical-align: middle;
+    display: initial !important;
+    text-align:center;
+}
+
+.flexslider .slides li{
+      height: 450px !important;
+    line-height: 450px !important;
+}
+.flexslider ul{
+
+}
+
+.flexslider li.ms-image:before, .metaslider li.ms-image:after{
+  display: initial !important ;
+}
+
+
+/**** header ***/
+
+#nav_header nav {
+    float: left;
+        height: 60px;
+}
+
+#nav_header nav ul{
+    height: 100%;
+    margin:0;
+}
+
+#nav_header nav ul li{
+    display: block;
+    float: left;
+    height: 100%;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 10px;   
+    position: relative;
+}
+
+#nav_header nav ul li span{
+  padding-top: 10px; 
+  }
+
+#nav_header.small nav ul li{
+    padding-top: 0px;
+  }
+
+#nav_header nav ul li:hover{
+    /*background-color: #D7DF01;*/
+}
+
+
+#nav_header nav ul li .fa{
+display: block;
+font-size: 1.8em;
+width: 100%;
+height: 0px;
+color: transparent;
+}
+
+#nav_header nav ul li .fa{
+    -webkit-transition: height 400ms ease;
+    transition:         height 400ms ease;
+  }
+
+#nav_header nav ul li .fa:hover{
+  /*height: 15px;
+  color: inherit;*/
+}
+
+#nav_header{
+        font-size: 0.5em;
+    }
+
+
+/** contact **/
+#contact{
+  float: left;
+  font-size: 1em;
+  color: blue;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-right: 10px;
+    display: none;
+}
+#contact .fa{
+font-size: 1.8em;
 }

@@ -804,7 +804,7 @@ ob_end_clean();
 ob_start();
 ?><a href="{WPSHOP_CATEGORY_LINK}">
             <div class="item">
-            		<div class="vertical_align_helper"></div><img src="{WPSHOP_CATEGORY_PICTURE}" />
+            		<div class="category_picture_container" ><div class="vertical_align_helper"></div><img src="{WPSHOP_CATEGORY_PICTURE}" /></div>
 	        	<div class="item_title">{WPSHOP_CATEGORY_TITLE}</div>
 	         </div>
          </a><?php

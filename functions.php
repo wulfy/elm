@@ -16,8 +16,7 @@ if ( function_exists('register_sidebar') ){
 global $the_terms_result;
 global $termsdata;
 
-ini_set('display_errors', true);
-	error_reporting(E_ALL);
+
 /** @ignore 
 function custom_url_head() {
 	//update url
@@ -287,7 +286,6 @@ function goldpot_add_theme_page() {
 
 function has_terms (){
 	global $the_terms_result;
-
 	return sizeof($the_terms_result)>0;
 }
 
@@ -310,14 +308,15 @@ function setTermsData($terms){
 		$termsdata[$term->term_id]["link"] = get_term_link(intval($term->term_id));
 		$category_meta_information = ( !empty($term) && !empty($term->term_id) ) ? get_option(WPSHOP_NEWTYPE_IDENTIFIER_CATEGORIES . '_' . $term->term_id) : '';
 		if(isset($category_meta_information['wpshop_category_picture']))
-			$image_url = wp_get_attachment_image_url( $category_meta_information['wpshop_category_picture'], 'thumbnail', false);//LLA
+			$image_url = wp_get_attachment_image_url( $category_meta_information['wpshop_category_picture'], 'full', false);//LLA
 		$image_url = ( !empty($image_url) ) ? $image_url : WPSHOP_DEFAULT_CATEGORY_PICTURE; //LLA
 		$termsdata[$term->term_id]["img"] = $image_url;
 	}
 
 }
 /** exemple **/
-function serach_in_terms($query) {
+function serach_in_terms($thequery) {
+
 global $wpdb,$the_terms_result; 
 
 $the_terms_result = [];
@@ -327,12 +326,13 @@ $the_terms_result = [];
 		$search = urldecode($_GET['s']);
 
 	$query = $wpdb->prepare("SELECT T.* FROM " . $wpdb->terms . " AS T INNER JOIN " . $wpdb->term_taxonomy . " AS TT ON T.term_id = TT.term_id WHERE TT.taxonomy = %s AND T.name LIKE %s", WPSHOP_NEWTYPE_IDENTIFIER_CATEGORIES , "%".$search."%");
+
 	$result = $wpdb->get_results($query);
 
 	$the_terms_result = $result;
 	setTermsData($the_terms_result);
 	}	
-
+	
 	
 }
 
@@ -384,7 +384,11 @@ die(var_dump($terms = wp_get_post_terms(190,WPSHOP_NEWTYPE_IDENTIFIER_CATEGORIES
 add_action( 'the_post', 'my_the_post_action' );**/
 
 
- 
+ 	function catExists($slug){
+ 		$the_cat = get_term_by( 'slug', $slug,WPSHOP_NEWTYPE_IDENTIFIER_CATEGORIES );
+
+ 		return $the_cat;
+ 	}
 
 	/******* SURCHARGE WPSHOP FUNCTIONS **********/
 	/**

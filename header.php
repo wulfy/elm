@@ -44,10 +44,20 @@
                 </div>
               </div>
             <nav>
-                  <a href='javascript:scrollToId("#group2")'><i class="fa fa-bus fa-fw"></i>EQUIPEMENT URBAIN</a>
-                  <a href='javascript:scrollToId("#group3")'><i class="fa fa-print fafw"></i>IDENTIFICATION BRADY</a>
-                  <a href="javascript:scrollToId('#group4')"><i class="fa fa-medkit fa-fw"></i>PROTECTION SÉCURITÉ</a>
-                  <a href='<?php echo do_shortcode('[get_category_link term_slug="signalisation_vehicules"]') ?>'><i class="fa fa-exclamation-triangle fa-fw"></i>SIGNALISATION</a>
+              <ul>
+                <li>
+                  <a href='javascript:scrollToId("#group2")'><span><i class="fa fa-bus fa-fw"></i>EQUIPEMENT URBAIN</span></a>
+                </li>
+                <li>
+                  <a href='javascript:scrollToId("#group3")'><span><i class="fa fa-print fafw"></i>IDENTIFICATION BRADY</span></a>
+                </li>
+                <li>
+                  <a href="javascript:scrollToId('#group4')"><span><i class="fa fa-medkit fa-fw"></i>PROTECTION SÉCURITÉ</span></a>
+                </li>
+                <li>
+                  <a href='<?php echo do_shortcode('[get_category_link term_slug="signalisation_vehicules"]') ?>'><span><i class="fa fa-exclamation-triangle fa-fw"></i>SIGNALISATION</span></a>
+                </li>
+              </ul>
               </nav>
           </div>
         </div>

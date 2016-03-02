@@ -80,6 +80,16 @@
 
 
 
+  $( "#nav_header li").hover(function(){
+    
+    $(this).find(".fa").height("15px").css('color', 'inherit');
+    
+  },function(){
+     
+    $(this).find(".fa").height("0px").css('color', 'transparent');
+    
+  });
+
 
   </script>
   

@@ -16,13 +16,15 @@ It's still in development, be carefull :);
 
 #nav_header{
     width: 100%;
-    height: 60px;
+    height: 50px;
     overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 300;
-    background-color: #ffff00;
+    /*background-color: #ffff00;*/
+        background: linear-gradient(to right, #ffff00, white);
+    box-shadow: 0px 5px 5px #888888;
 
 }
 
@@ -34,7 +36,7 @@ It's still in development, be carefull :);
 
 @media only screen and (min-width:950px) and (max-width: 1150px){
     #nav_header{
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 }
 
@@ -61,26 +63,28 @@ It's still in development, be carefull :);
   height: 30px;
 }
 
-#nav_header nav {
-    float: left;
-        line-height: 40px;
-        margin-top: 5px;
-}
+
 #nav_header nav a {
-    line-height: 30px;
     margin-right: 0.5em;
     color: blue;
     font-weight: 700;
-    font-size: 0.8em;
+    font-size: 0.6em;
      text-decoration:none; 
+     margin: 0;
 }
 #nav_header nav a:hover {
     text-decoration:underline; 
 }
 
+#nav_header li span{
+    display: block;
+    border-right: solid 1px #D7DF01;
+    padding-right: 5px;
+}
+
 .account_and_cart{
-	float: right;
-	font-size: 0.8em;
+   float: right;
+    font-size: 0.8em;
     margin-top: 5px;
 }
 
@@ -132,13 +136,13 @@ It's still in development, be carefull :);
 
 #nav_content{
     float: left;
-    padding-left: 20px;
     width: 70%;
 }
 
 #sitelogo{
     float:left;
-    width: 20%;
+    width: 15%;
+    margin-right: 30px;
 }
 
 #content{
@@ -214,7 +218,7 @@ It's still in development, be carefull :);
 /******/
 /*** WPSHOP **/
 .wpshop_category_informations{
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .wps-header-mini-cart{
@@ -255,6 +259,8 @@ body .entry-content button, body .bouton_wpshop, body .wpshop_cart_buttons_conta
 }
 /*********/
 
+
+/*** search ***/
 .search_thumb_container{
     width: 100px;
     height: auto;
@@ -325,22 +331,21 @@ body .entry-content button, body .bouton_wpshop, body .wpshop_cart_buttons_conta
 
 /***** BREADCRUMB ***/
 #content #wps-breadcrumb{
-    padding-top: 0;
+    padding-top: 20px;
     padding-bottom: 40px;
     font-style: italic;
 }
 
 
 /***** CATEGORY **/
-.category-picture img{
-    width: 80%;
-}
 .wpshop_mini_grid_thumbnail{
-    height: 100px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 150px;
 }
 ul.products_listing.grid_mode img{
-    max-width: 100px ;
-    max-height: 100px;
+    max-width: 90% !important;
+    max-height: 90% !important;
 }
 
 img.attachment-medium{
@@ -348,10 +353,76 @@ img.attachment-medium{
     max-height: 200px;
 }
 
+/*sub list display */
+.category_subcategories_list .item{
+    max-width: 100%;
+    margin-top : 30px;
+    text-decoration:none;
+}
+
+.category_subcategories_list .category_picture_container{
+width: 200px;
+    height: auto;
+    display: inline-block;
+    margin-right: 50px;
+    vertical-align: middle;
+}
+
+.category_subcategories_list img{
+display: inline-block;
+    vertical-align: middle;
+    text-decoration:none;
+}
+
+.category_subcategories_list .item_title{
+    display: inline-block;
+    text-decoration:none;
+    font-weight: bold;
+}
+
+/** detail categorie **/
+.category-picture img{
+    width: 50%;
+}
+
 /*******************/
+
 
 /****** PRODUCTS ***/
 
 .entry-title{
     text-align: center;
 }
+
+/********* HEADER ******/
+
+#nav_header nav {
+    float: left;
+        height: 80px;
+}
+
+#nav_header nav ul{
+    height: 100%;
+    margin:0;
+}
+
+#nav_header nav ul li{
+    display: block;
+    float: left;
+    height: 100%;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 10px;   
+}
+
+#nav_header nav ul li:hover{
+    background-color: #D7DF01;
+}
+
+
+#nav_header nav ul li .fa{
+display: block;
+font-size: 1.8em;
+width: 100%;
+}
+

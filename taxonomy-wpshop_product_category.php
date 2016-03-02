@@ -75,7 +75,7 @@ get_header(); ?>
 <?php
 					foreach($category_tree as $sub_category_id => $sub_category_content){
 						$sub_category_definition = get_term($sub_category_id, WPSHOP_NEWTYPE_IDENTIFIER_CATEGORIES);
-						echo wpshop_categories::category_mini_output($sub_category_definition, $output_type);
+						echo category_mini_output($sub_category_definition, $output_type);
 					}
 ?>
 					</div>
