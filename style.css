@@ -380,7 +380,7 @@ display: inline-block;
 
 /** detail categorie **/
 .category-picture img{
-    width: 50%;
+   max-width: 50%;
 }
 
 /*******************/
