@@ -23,7 +23,7 @@ It's still in development, be carefull :);
     left: 0;
     z-index: 300;
     /*background-color: #ffff00;*/
-        background: linear-gradient(to right, #ffff00, white);
+    background: linear-gradient(to right, #FAFAFA, white);
     box-shadow: 0px 5px 5px #888888;
 
 }
@@ -78,8 +78,9 @@ It's still in development, be carefull :);
 
 #nav_header li span{
     display: block;
-    border-right: solid 1px #D7DF01;
+    /*border-right: solid 1px #D7DF01;*/
     padding-right: 5px;
+    padding-top:10px;
 }
 
 .account_and_cart{
@@ -113,10 +114,8 @@ It's still in development, be carefull :);
 }
 
 #searchBox{
-    float: right;
-    clear: both;
-    margin-right: auto;
-    margin-left: auto;
+      float: left;
+    padding-top: 10px;
 }
 
 #searchBox .form{
@@ -137,12 +136,11 @@ It's still in development, be carefull :);
 #nav_content{
     float: left;
     width: 70%;
+    padding-left: 20px;
 }
 
 #sitelogo{
     float:left;
-    width: 15%;
-    margin-right: 30px;
 }
 
 #content{
@@ -413,16 +411,39 @@ display: inline-block;
     text-align: center;
     margin-right: 10px;
     padding-top: 10px;   
+    width: 130px;
 }
 
+
+
 #nav_header nav ul li:hover{
-    background-color: #D7DF01;
+    
 }
 
 
 #nav_header nav ul li .fa{
-display: block;
+display: none;
 font-size: 1.8em;
 width: 100%;
+}
+
+.blue:hover{
+    background-color: #66a0fd;
+}
+
+.blue:hover a,.green:hover a, .orange:hover a, .red:hover a{
+    color:white !important;
+  }
+
+.green:hover{
+    background-color: #0DA95F;
+    color:white;
+}
+.red:hover{
+    background-color: #FA5858;
+    color:white;
+}
+.orange:hover{
+  background-color:#FF8000;
 }
 

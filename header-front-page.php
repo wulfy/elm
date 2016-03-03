@@ -36,16 +36,16 @@
       <div id="nav_content">
         <nav>
               <ul>
-                <li>
+                <li class="green">
                   <a href='javascript:scrollToId("#group2")'><i class="fa fa-bus fa-fw"></i><span>EQUIPEMENT URBAIN</span></a>
                 </li>
-                <li>
+                <li class="blue">
                   <a href='javascript:scrollToId("#group3")'><i class="fa fa-print fafw"></i><span>IDENTIFICATION BRADY</span></a>
                 </li>
-                <li>
+                <li class="red">
                   <a href="javascript:scrollToId('#group4')"><i class="fa fa-medkit fa-fw"></i><span>PROTECTION SÉCURITÉ</span></a>
                 </li>
-                <li>
+                <li class="orange">
                   <a href='javascript:scrollToId("#group5")'><i class="fa fa-exclamation-triangle fa-fw"></i><span>SIGNALISATION</span></a>
                 </li>
           </nav>
@@ -60,7 +60,7 @@
       </div>
       
     </div>
-    
+
     <div class="account_and_cart">
           <a href="<?php echo get_permalink( wpshop_tools::get_page_id( get_option('wpshop_checkout_page_id ') ) ); ?>" class="wps-mini-cart-opener">
                 <i class="wps-icon-basket"></i>

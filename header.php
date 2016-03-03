@@ -39,26 +39,28 @@
                 <?php echo do_shortcode('[wps_mini_cart]') ?>
                 <?php /*echo do_shortcode('[wpshop_breadcrumb]') */?> 
                 
-                <div id="searchBox">
-                  <?php get_search_form(); ?>
-                </div>
               </div>
             <nav>
               <ul>
-                <li>
+                <li class="green">
                   <a href='javascript:scrollToId("#group2")'><span><i class="fa fa-bus fa-fw"></i>EQUIPEMENT URBAIN</span></a>
                 </li>
-                <li>
+                <li class="blue">
                   <a href='javascript:scrollToId("#group3")'><span><i class="fa fa-print fafw"></i>IDENTIFICATION BRADY</span></a>
                 </li>
-                <li>
+                <li class="red">
                   <a href="javascript:scrollToId('#group4')"><span><i class="fa fa-medkit fa-fw"></i>PROTECTION SÉCURITÉ</span></a>
                 </li>
-                <li>
+                <li class="orange">
                   <a href='<?php echo do_shortcode('[get_category_link term_slug="signalisation_vehicules"]') ?>'><span><i class="fa fa-exclamation-triangle fa-fw"></i>SIGNALISATION</span></a>
                 </li>
               </ul>
               </nav>
+
+              <div id="searchBox">
+                <?php get_search_form(); ?>
+              </div>
+              
           </div>
         </div>
         
