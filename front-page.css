@@ -45,6 +45,7 @@ Designed for wp shop
 }
 #sitelogo{
     float:left;
+    padding-left: 5px;
 }
 
 .account_and_cart a{
@@ -602,6 +603,7 @@ margin-top: 10px;
     z-index: 9999999;
     right: 10px;
     top: 50px;
+    display: none;
   }
 
   .contact_us img{
@@ -721,12 +723,19 @@ height: 100%;
     margin:0;
 }
 
+#nav_header nav ul li a{
+  float: left;
+  width: 100%;
+  height: 100%;
+
+}
+
 #nav_header nav ul li{
     display: block;
     float: left;
     height: 100%;
     text-align: center;
-    margin-right: 10px;
+    /*margin-right: 10px;*/
     padding-top: 10px;   
     position: relative;
         width: 130px;
@@ -742,6 +751,8 @@ height: 100%;
 
 #nav_header nav ul li:hover{
     /*background-color: #D7DF01;*/
+    font-size: 1.3em;
+    padding-top: 5px;
 }
 
 
@@ -788,15 +799,99 @@ color: transparent;
 
 /** contact **/
 #contact{
-  float: left;
+  float: right;
   font-size: 1em;
   color: blue;
     font-weight: 700;
     font-size: 1.2em;
     margin-top: 20px;
     margin-right: 10px;
-    display: none;
+    display: block;
 }
 #contact .fa{
 font-size: 1.8em;
+}
+
+
+/** ALL **/
+#nav_header a{
+  text-decoration: none;
+}
+
+
+/**** NEXT ***/
+@-webkit-keyframes contact_animate {
+     0% {
+        bottom: 80px;
+        opacity:0;
+    }
+    50% {
+        bottom: 40px;
+        opacity:1;
+    }
+    100% {
+         bottom:1px;
+         opacity:0;
+    }
+}
+@-moz-keyframes contact_animate {
+    0% {
+        bottom: 80px;
+        opacity:0;
+    }
+    50% {
+        bottom: 40px;
+        opacity:1;
+    }
+    100% {
+         bottom:1px;
+         opacity:0;
+    }
+}
+@-o-keyframes contact_animate {
+    0% {
+        bottom: 80px;
+        opacity:0;
+    }
+    50% {
+        bottom: 40px;
+        opacity:1;
+    }
+    100% {
+         bottom:1px;
+         opacity:0;
+    }
+}
+.next {
+    -webkit-animation: contact_animate 1.5s linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: contact_animate 1.5s linear;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: contact_animate 1.5s linear;
+    -o-animation-iteration-count: infinite;
+        -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+
+          font-size: 3em;
+          font-weight: bold;
+          opacity:0;
+          position:absolute;
+          margin-left: auto;
+          margin-right: auto;
+          bottom:5px;
+          left:50%;
+          color:#BDBDBD;
+}
+
+.next a:link{
+  color:#BDBDBD;
+  text-decoration: none;
+}
+
+/***** FOOTER ****/
+/**** footer ****/
+#colophon{
+    background-color: black;
+    margin: 0;
+    padding: 0;
 }

@@ -68,25 +68,25 @@ It's still in development, be carefull :);
     margin-right: 0.5em;
     color: blue;
     font-weight: 700;
-    font-size: 0.6em;
+    font-size: 1.1em;
      text-decoration:none; 
      margin: 0;
 }
 #nav_header nav a:hover {
-    text-decoration:underline; 
+    /*text-decoration:underline; */
 }
 
 #nav_header li span{
     display: block;
     /*border-right: solid 1px #D7DF01;*/
     padding-right: 5px;
-    padding-top:10px;
+    padding-top:5px;
 }
 
 .account_and_cart{
    float: right;
-    font-size: 0.8em;
-    margin-top: 5px;
+    font-size: 1.5em;
+    margin-top: 10px;
 }
 
 .account_and_cart a:link{
@@ -135,12 +135,13 @@ It's still in development, be carefull :);
 
 #nav_content{
     float: left;
-    width: 70%;
+    width: 80%;
     padding-left: 20px;
 }
 
 #sitelogo{
     float:left;
+    padding-left: 5px;
 }
 
 #content{
@@ -228,6 +229,7 @@ It's still in development, be carefull :);
 .login_container{
     float: left;
     height: 1em;
+    font-size: 1em;
 }
 .login_container ul{
     margin-top:2px;
@@ -236,7 +238,6 @@ It's still in development, be carefull :);
 body .entry-content button, body .bouton_wpshop, body .wpshop_cart_buttons_container input[type=submit].bouton_wpshop {
     background: none;
     border: none;
-    padding: 8px 14px;
     background: #67c4d0;
     color: #fff;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -257,6 +258,10 @@ body .entry-content button, body .bouton_wpshop, body .wpshop_cart_buttons_conta
 }
 /*********/
 
+body {
+        margin :0;
+            font: 100% / 1.5 Arial;
+}
 
 /*** search ***/
 .search_thumb_container{
@@ -340,10 +345,12 @@ body .entry-content button, body .bouton_wpshop, body .wpshop_cart_buttons_conta
     display: inline-block;
     vertical-align: middle;
     height: 150px;
+        line-height: 150px;
 }
 ul.products_listing.grid_mode img{
     max-width: 90% !important;
     max-height: 90% !important;
+    vertical-align: middle;
 }
 
 img.attachment-medium{
@@ -409,15 +416,24 @@ display: inline-block;
     float: left;
     height: 100%;
     text-align: center;
-    margin-right: 10px;
+    /*margin-right: 10px;*/
     padding-top: 10px;   
     width: 130px;
+    font-size:1.1em;
 }
 
+#nav_header nav ul li a{
+  float: left;
+  width: 100%;
+  height: 100%;
 
+}
 
 #nav_header nav ul li:hover{
-    
+    /*background-color: #D7DF01;*/
+    font-size: 1.3em;
+    padding-top: 5px;
+    text-align: center;
 }
 
 
@@ -427,6 +443,9 @@ font-size: 1.8em;
 width: 100%;
 }
 
+#nav_header{
+        font-size: 0.5em;
+    }
 .blue:hover{
     background-color: #66a0fd;
 }
@@ -447,3 +466,35 @@ width: 100%;
   background-color:#FF8000;
 }
 
+
+/** contact **/
+#contact{
+    float: right;
+    font-size: 1em;
+    color: blue;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-right: 15px;
+    display: block;
+}
+#contact .fa{
+font-size: 1.8em;
+}
+
+a.nou{
+    text-decoration: none;
+}
+
+#contact_footer{
+    text-align: center;
+    font-size: 2em;
+    color: #BDBDBD;
+}
+
+/**** footer ****/
+#colophon{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}

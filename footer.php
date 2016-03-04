@@ -11,15 +11,19 @@
 ?>
 
 		</div><!-- #main -->
-		<footer id="colophon" class="site-footer" role="contentinfo">
 
-			<div class="site-info">
-				
-				
-			</div><!-- .site-info -->
-		</footer><!-- #colophon -->
 	</div><!-- #page -->
 
+<footer id="colophon" class="site-footer" role="contentinfo">
+
+			<div class="site-info">
+			</div><!-- .site-info -->
+			<div id="contact_footer">
+                <i class="fa fa-at"></i>
+                <span class="nou">contactez nous</span>
+         </div>
+		</footer><!-- #colophon -->
+		
 	<?php wp_footer(); ?>
 </body>
 </html>

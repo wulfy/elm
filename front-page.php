@@ -20,8 +20,9 @@ get_header("front-page"); ?>
             $content = apply_filters('the_content', $post->post_content); 
             echo $content; 
           ?>
-      </div>
 
+      </div>
+      <div class="next"><a href='javascript:scrollToId("#group1")'><i class="fa fa-angle-down"></i></a></div>
 
       </div>
     </div>

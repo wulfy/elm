@@ -31,15 +31,10 @@
 		<header id="nav_header" class="<?php if(is_admin_bar_showing()) echo 'under_admin'; ?>">
         <div class="container clearfix">
           <div id="sitelogo">
-            <a href="<?php bloginfo('url');?>"><h1 id="logo"><img src="http://www.lmsecurite.fr/titre_fichiers/lm.jpg"/> </h1></a>
+            <a href="<?php bloginfo('url');?>"><h1 id="logo"><img src="<?php bloginfo('template_directory'); ?>/images/logolm.jpg"/> </h1></a>
           </div>
           <div id="nav_content">
-            <div class="account_and_cart">
-                <?php echo do_shortcode('[get_login_container]')?>
-                <?php echo do_shortcode('[wps_mini_cart]') ?>
-                <?php /*echo do_shortcode('[wpshop_breadcrumb]') */?> 
-                
-              </div>
+            
             <nav>
               <ul>
                 <li class="green">
@@ -60,8 +55,19 @@
               <div id="searchBox">
                 <?php get_search_form(); ?>
               </div>
-              
+
+              <div class="account_and_cart">
+                <?php echo do_shortcode('[get_login_container]')?>
+                <?php echo do_shortcode('[wps_mini_cart]') ?>
+                <?php /*echo do_shortcode('[wpshop_breadcrumb]') */?> 
+                
+              </div>
+              <div id="contact">
+                <span class="nou">contactez nous</span>
+              </div>
           </div>
+
+
         </div>
         
     

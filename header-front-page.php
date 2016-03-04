@@ -31,7 +31,7 @@
   <header id="nav_header" class="<?php if(is_admin_bar_showing()) echo 'under_admin'; ?>">
     <div class="container clearfix">
       <div id="sitelogo">
-          <a href='javascript:scrollToId("#group1")'><h1 id="logo"><div class="vertical_align_helper"></div><img src="http://www.lmsecurite.fr/titre_fichiers/lm.jpg"/> </h1></a>
+          <a href='javascript:scrollToId("#group1")'><h1 id="logo"><div class="vertical_align_helper"></div><img src="<?php bloginfo('template_directory'); ?>/images/logolm.jpg"/> </h1></a>
       </div>
       <div id="nav_content">
         <nav>
@@ -49,10 +49,7 @@
                   <a href='javascript:scrollToId("#group5")'><i class="fa fa-exclamation-triangle fa-fw"></i><span>SIGNALISATION</span></a>
                 </li>
           </nav>
-          <div id="contact">
-            <i class="fa fa-at"></i>
-            <span>contactez nous</span>
-          </div>
+          
           <div id="searchBox">
               <?php get_search_form(); ?>
           </div>
@@ -61,11 +58,15 @@
       
     </div>
 
+    
     <div class="account_and_cart">
           <a href="<?php echo get_permalink( wpshop_tools::get_page_id( get_option('wpshop_checkout_page_id ') ) ); ?>" class="wps-mini-cart-opener">
                 <i class="wps-icon-basket"></i>
                 <?php echo do_shortcode('[wps-numeration-cart]'); ?>
           </a>
         </div>
+    <div id="contact">
+            <span ><a class="nou" href='javascript:scrollToId("#group6")'>contactez nous</a></span>
+          </div>
   </header>
 <!-- end header -->
