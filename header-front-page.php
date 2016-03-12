@@ -66,7 +66,7 @@
           </a>
         </div>
     <div id="contact">
-            <span ><a class="nou" href='javascript:scrollToId("#group6")'>contactez nous</a></span>
+            <span ><a class="nous" href='javascript:scrollToId("#group6")'>contactez nous</a></span>
           </div>
   </header>
 <!-- end header -->

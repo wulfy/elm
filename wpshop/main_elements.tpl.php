@@ -66,8 +66,9 @@ ob_end_clean();
  */
 ob_start();
 ?>
-<button itemprop="availability" content="in_stock" type="button" id="wpshop_ask_a_quotation_{WPSHOP_PRODUCT_ID}" class="bton_bleu wpshop_ask_a_quotation_button wpshop_products_listing_bton_panier_active">Demander un devis</button><br/>
-<button itemprop="availability" content="in_stock" id="wpshop_add_to_cart_{WPSHOP_PRODUCT_ID}" class="wpshop_add_to_cart_button wps-bton-first-mini-rounded"><i class="wps-icon-basket"></i><?php _e('Add to cart', 'wpshop'); ?></button>
+<button itemprop="availability" content="in_stock" id="wpshop_add_to_cart_{WPSHOP_PRODUCT_ID}" class="wpshop_add_to_cart_button wps-bton-first-mini-rounded"><i class="wps-icon-basket"></i><?php _e('Add to cart', 'wpshop'); ?></button> 
+<button itemprop="availability" content="in_stock" type="button" id="wpshop_ask_a_quotation_{WPSHOP_PRODUCT_ID}" class="bton_bleu wpshop_ask_a_quotation_button wpshop_products_listing_bton_panier_active">Demander un devis</button>
+
 <?php
 $tpl_element['add_to_cart_button'] = ob_get_contents();
 ob_end_clean();

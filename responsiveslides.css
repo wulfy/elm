@@ -72,8 +72,8 @@
 .callbacks_container {
     margin-bottom: 50px;
     position: relative;
-    margin: 100px auto 0;
-    max-width: 80%;
+    margin: 70px auto 0;
+    max-width: 100%;
 }
 
 .callbacks_nav.next {

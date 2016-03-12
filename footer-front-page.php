@@ -9,7 +9,7 @@
 
 <script>
     var debugInput = document.querySelector("input");
-    var offset = <?php echo (is_admin_bar_showing())?100:0; ?>;
+    var offset = <?php echo (is_admin_bar_showing())?100:25; ?>;
     function updateDebugState() {
         document.body.classList.toggle('debug-on', debugInput.checked);
         document.body.classList.toggle('titles-on', debugInput.checked);
@@ -20,26 +20,40 @@
     var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
     var is_safari = navigator.userAgent.toLowerCase().indexOf('safari') > -1;
 
-    function scrollToId(id) {
-       //location.hash = id;
-       var scrollDest = $(id).offset().top;
-       $('.parallax').animate({
+    function scrollToDest(scrollDest){
+
+        var offset = 50;
+        $('.parallax').animate({
           scrollTop:scrollDest + $('.parallax').scrollTop()-offset
         }, 'slow');
        $('body,html').animate({
-          scrollTop:scrollDest - 100
+          scrollTop:scrollDest - offset
         }, 'slow');
+
+    }
+
+
+    function scrollToId(id) {
+       //location.hash = id;
+       var scrollDest = $(id).offset().top;
+       scrollToDest(scrollDest);
       
     }
 
-    $(".parallax").scroll(function(){
+    /*$(".parallax").scroll(function(){
        console.log($(".parallax").scrollTop());
        if($(".parallax").scrollTop() > 100)
           $('#nav_header').addClass("small");
         else
           $('#nav_header').removeClass("small");
-    });
+    });*/
 
+    function scrollToFirstPage(){
+      var scrollDest = $(window).height();
+
+      scrollToDest(scrollDest);
+
+    }
 
 
     $(function () {

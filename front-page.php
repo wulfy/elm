@@ -22,7 +22,7 @@ get_header("front-page"); ?>
           ?>
 
       </div>
-      <div class="next"><a href='javascript:scrollToId("#group1")'><i class="fa fa-angle-down"></i></a></div>
+      <div class="next"><a href='javascript:scrollToFirstPage()'><i class="fa fa-angle-down"></i></a></div>
 
       </div>
     </div>

@@ -41,10 +41,10 @@ It's still in development, be carefull :);
 }
 
   #nav_header.small{
-    height: 50px;
+    height: 60px;
     font-size:80%;
     background-color: white;
-    line-height: 25px;
+    /*line-height: 25px;*/
     opacity: 0.7;
   }
 
@@ -149,10 +149,10 @@ It's still in development, be carefull :);
     margin: 0 auto;
     min-height: 800px;
     padding: 0 20px;
-    padding-top: 50px;
+    padding-top: 60px;
     position: relative;
     width: 80%;
-    box-shadow: 1px 1px 12px #555;
+    /*box-shadow: 1px 1px 12px #555;*/
 }
 
 .center{
@@ -244,7 +244,7 @@ body .entry-content button, body .bouton_wpshop, body .wpshop_cart_buttons_conta
     font-size: 15px;
     font-weight: bold;
     color: #fff;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     margin-top: 20px;
     box-shadow: none;
     text-shadow: none;
@@ -399,6 +399,60 @@ display: inline-block;
     text-align: center;
 }
 
+.entry-thumbnail{
+    display: none;
+}
+
+.entry-header{
+    display: none;
+}
+
+.wps-product-section h1.entry-title{
+    font-size: 2em;
+}
+.wps-grid1x2-end_float_780{
+    padding-left: 50px;
+}
+
+.wps-product-section label{
+    display: inline;
+}
+
+.wps-productQtyForm{
+    display: inline;
+}
+
+.wps-product-section:last-of-type{
+    border-top: dotted 1px;
+    margin-top: 50px;
+}
+
+.wpshop_ask_a_quotation_button{
+    display: inline;
+    font-size: 15px !important;
+    margin: 0  !important;
+    height: 29px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.wpshop_add_to_cart_button{
+    display: inline;
+    margin: 0 !important;
+    font-size: 15px !important;
+
+}
+
+.wps-form{
+    margin-top: 10px;
+}
+
+#wps-breadcrumb{
+    z-index: 99999999999;
+    position: relative;
+}
+.wps-zoom-loupe{
+    z-index: 9 !important;
+}
 /********* HEADER ******/
 
 #nav_header nav {
@@ -490,11 +544,12 @@ a.nou{
     text-align: center;
     font-size: 2em;
     color: #BDBDBD;
+    height: 150px;
 }
 
 /**** footer ****/
 #colophon{
-    background-color: black;
+    background-color: #6E6E6E;
     margin: 0;
     padding: 0;
 }
