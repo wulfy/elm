@@ -110,7 +110,7 @@ It's still in development, be carefull :);
 }
 
 .under_admin{
-	margin-top:50px !important;
+	margin-top:20px !important;
 }
 
 #searchBox{
@@ -447,7 +447,7 @@ display: inline-block;
 }
 
 #wps-breadcrumb{
-    z-index: 99999999999;
+    z-index: 10;
     position: relative;
 }
 .wps-zoom-loupe{
@@ -455,6 +455,9 @@ display: inline-block;
 }
 /********* HEADER ******/
 
+#nav_header{
+    z-index:10000;
+}
 #nav_header nav {
     float: left;
         height: 80px;

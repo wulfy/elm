@@ -9,7 +9,7 @@
 
 <script>
     var debugInput = document.querySelector("input");
-    var offset = <?php echo (is_admin_bar_showing())?100:25; ?>;
+    var offset = <?php echo (is_admin_bar_showing())?100:50; ?>;
     function updateDebugState() {
         document.body.classList.toggle('debug-on', debugInput.checked);
         document.body.classList.toggle('titles-on', debugInput.checked);
@@ -22,7 +22,6 @@
 
     function scrollToDest(scrollDest){
 
-        var offset = 50;
         $('.parallax').animate({
           scrollTop:scrollDest + $('.parallax').scrollTop()-offset
         }, 'slow');
